@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  wiki-random:
+    build: .
+    container_name: wiki-random
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
