@@ -8,13 +8,13 @@ from flask import Flask, redirect, jsonify, request
 
 app = Flask(__name__)
 
-# ---------------- Logging ----------------
+# Logging
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s"
 )
 
-# ---------------- Constants ----------------
+# Constants
 WIKI_API = "https://en.wikipedia.org/w/api.php"
 
 DEFAULT_MIN_PAGE_SIZE = 6000
@@ -39,7 +39,7 @@ RATE_LIMIT = 30
 RATE_WINDOW = 60
 _request_log = defaultdict(deque)
 
-# ---------------- Utilities ----------------
+# Utilities
 
 def rate_limited(ip: str) -> bool:
     now = time.time()
@@ -93,7 +93,7 @@ def contains_excluded_keyword(text: str, keywords: list[str]) -> bool:
     text = text.lower()
     return any(k in text for k in keywords)
 
-# ---------------- Routes ----------------
+# Routes
 
 @app.route("/api/wiki-random")
 def random_article():
@@ -103,7 +103,7 @@ def random_article():
         logging.warning("Rate limit exceeded | IP=%s", client_ip)
         return jsonify({"error": "rate limit exceeded"}), 429
 
-    # --- Params ---
+    # Params
     categories_param = request.args.get("categories")
     min_size_param = request.args.get("min_size")
     evergreen = request.args.get("evergreen", "false").lower() == "true"

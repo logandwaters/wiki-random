@@ -110,4 +110,15 @@ It intentionally avoids UI and persistence.
 
 ## License
 
-MIT
+This project is licensed under the  
+**Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)** license.
+
+You are free to:
+- Use and modify the code for personal or educational purposes
+- Share and collaborate on non-commercial forks
+
+You may not:
+- Use this project or derivatives for commercial purposes
+- Offer it as a paid service or product
+
+Full license text: https://creativecommons.org/licenses/by-nc/4.0/
