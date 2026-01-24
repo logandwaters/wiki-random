@@ -1,3 +1,11 @@
+<video
+  src="assets/endpoint-demo.mp4"
+  autoplay
+  loop
+  muted
+  playsinline
+  width="800">
+</video>
 
 # Wiki Random API
 
