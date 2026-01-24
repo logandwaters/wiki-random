@@ -14,17 +14,22 @@ Wiki-random is a lightweight, stateless HTTP API that redirects the user to a ra
 # Overview
 ## Endpoints
 
-Method | Slug | Description
-GET | /api/wiki-random | Redirects (`302`) to a random Wikipedia article
-GET | /api/wiki-random/health | Health check endpoint, returns JSON status
+| Method | Slug | Description |
+| --- | --- | --- |
+| GET | /api/wiki-random | Redirects (`302`) to a random Wikipedia article |
+| GET | /api/wiki-random/health | Health check endpoint, returns JSON status |
 
 ## Query Parameters
 
-Parameter | Type | Default | Description | Use
-categories | string (CSV) | [Categories default](#ADD_DEFAULT_CATEGORIES_HERE) | Comma-separated list of Wikipedia categories to source articles from | `?categories=science,technology,art`
-min_size | integer | 6000 | Minimum article size in bytes | `?min_size=8000`
-evergreen | boolean | false | Attempts to filter out time-sensitive or list-style articles | `?evergreen=true`
-exclude | string (CSV) | none | Comma-separated list of keywords to exclude from results | `?exclude=politics,election`
+| Parameter | Type | Default | Description | Use |
+| --- | --- | --- | --- | --- |
+| categories | string (CSV) | [Categories default](#ADD_DEFAULT_CATEGORIES_HERE) | Comma-separated list of Wikipedia categories to source articles from | `?categories=science,technology,art` |
+| min_size | integer | 6000 | Minimum article size in bytes | `?min_size=8000` |
+| evergreen | boolean | false | Attempts to filter out time-sensitive or list-style articles | `?evergreen=true` |
+| exclude | string (CSV) | none | Comma-separated list of keywords to exclude from results | `?exclude=politics,election` |
+
+> [!TIP]
+> Excessively strict filters may lead to higher probability of repeats or failures to find adequate articles.
 
 ## Examples
 
