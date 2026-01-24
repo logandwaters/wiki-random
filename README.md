@@ -1,11 +1,8 @@
-<video
-  src="assets/endpoint-demo.mp4"
-  autoplay
-  loop
-  muted
-  playsinline
-  width="800">
-</video>
+# ### Live endpoint demo
+
+The endpoint is typed manually and immediately redirects to a generated result.
+
+![Demo](assets/demo.gif)
 
 # Wiki Random API
 
