@@ -1,7 +1,3 @@
-# personal ignore items
-old/
-new/
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
